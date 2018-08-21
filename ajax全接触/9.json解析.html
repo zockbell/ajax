@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// json格式化在线校验工具：http://jsonlint.com     http://json.cn
+
+		// JSON解析
+		// eval和JSON.parse
+		// 在代码中使用eval是很危险的！特别是用它执行第三方的JSON数据（其中可能包含恶意代码）时，尽可能使用JSON.parse()方法解析字符串本身，该方法还可以捕捉JSON中的语法错误。
+
+		var jsondata = '{"staff": [{"name":"张三","age": 70},{"name":"李四","age": 29},{"name":"王五","age": 30}]}';
+
+		// eval方法字符串转json对象
+		var jsonobj = eval('('+ jsondata +')');
+		console.log(jsonobj.staff[1].name);
+
+		// JSON.parse()方法
+		var jsonObj = JSON.parse(jsondata);
+	</script>
+</body>
+</html>

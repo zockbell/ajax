@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>使用Ajax加载JSON With Ajax</title>
+</head>
+<body>
+	<div id="content"></div>
+	<script>
+		var xhr = new XMLHttpRequest();
+		xhr.onload = function(){
+			if(xhr.status === 200){
+
+				console.log(xhr.responseText)
+
+				responseObject = JSON.parse(xhr.responseText);
+				var newContnet = '';
+				for(var i=0; i<responseObject.events.length; i++){
+					newContnet += '<div class="event">';
+					newContnet += '<img src=' + responseObject.events[i].map + ' alt=' + responseObject.events[i].location + '/>';
+					newContnet += '<p><b>' + responseObject.events[i].location + '</b><br>';
+					newContnet += responseObject.events[i].date + '</p>';
+					newContnet += '</div>';
+				}
+				document.getElementById('content').innerHTML = newContnet;
+			}
+		};
+		xhr.open('GET','data/data.json',true);
+		xhr.send(null);
+	</script>
+</body>
+</html>

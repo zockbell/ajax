@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"location": "北京市",
+			"date": "7月31日",
+			"map": "img/111.jpg"
+		},
+		{
+			"location": "上海市",
+			"date": "8月1日",
+			"map": "img/222.jpg"
+		},
+		{
+			"location": "天津市",
+			"date": "8月2日",
+			"map": "img/333.jpg"
+		}
+	]
+}

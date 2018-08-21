@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// XMLHttpRequest对象
+		var request;
+		if(window.XMLHttpRequest){
+			request = new XMLHttpRequest;  //ie7+,firefox,chrome,opera,safari...
+		}else{
+			request = new ActiveXObject("Microsoft.XMLHTTP");  //IE6,IE5
+		}
+	</script>
+</body>
+</html>
